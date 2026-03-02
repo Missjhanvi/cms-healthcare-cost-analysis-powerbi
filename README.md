@@ -1,37 +1,56 @@
-# cms-healthcare-cost-analysis-powerbi
-Interactive Healthcare Cost Analysis Dashboard using CMS Medicare Inpatient Data (Power BI + DAX + Star Schema)
+📊CMS Healthcare Cost Analysis Dashboard
+Power BI | DAX | Data Modeling | Business Intelligence
 
-📊 CMS Healthcare Cost Analysis Dashboard
 📌 Project Overview
--This project analyzes CMS Medicare Inpatient Hospital data (2023) to evaluate hospital charges, Medicare payments, and financial efficiency across states and procedures.
+This project analyzes the CMS Medicare Inpatient Hospital Dataset (2023) to evaluate hospital pricing behavior, Medicare reimbursement patterns, and healthcare cost variation across states and medical procedures (DRGs).
+The objective was to design an interactive Power BI dashboard that delivers executive-level insights into hospital charge trends, Medicare reimbursement comparison, procedure-level cost concentration, state-level cost variation, and hospital efficiency analysis.
 
-🏗 Data Modeling
--Implemented Star Schema (Fact + Dimension tables)
--fact_inpatient
--dim_hospital
--dim_drg
+🏗 Data Modeling Approach
+Implemented a Star Schema data model for optimized reporting and scalability.
+Fact Table: fact_inpatient
+• Total Discharges
+• Avg Covered Charges
+• Avg Total Payment
+• Avg Medicare Payment
 
-📈 Key KPIs
--Total Discharges
--Average Covered Charges
--Average Medicare Payment
--Cost to Medicare Ratio
--Medicare Coverage %
+Dimension Tables
+dim_hospital
+• Provider ID
+• Provider Name
+• City
+• State
+• RUCA Classification
 
-📊 Analytical Visuals
--Top 10 Most Expensive DRGs
--Payment Gap Analysis
--Hospital Cost vs Medicare Payment (Scatter Plot)
--Interactive Slicers (State & DRG)
+dim_drg
+• DRG Code
+• DRG Description
 
-🛠 Tools Used
--Power BI
--DAX
--Data Modeling
--CMS Public Healthcare Dataset
+📈Key DAX Measures
+• Total Discharges (Sum)
+• Average Covered Charges
+• Average Medicare Payment
+• Payment Gap
+• Cost to Medicare Ratio
+• Medicare Coverage %
 
-💡 Business Insights
--Identified high-cost procedures
--Analyzed Medicare reimbursement gaps
--Compared state-level cost variations
--Evaluated hospital pricing efficiency
+📊Dashboard Features
+• Executive KPI Section
+• Top 10 Most Expensive DRGs
+• Payment Gap Analysis
+• State-Level Cost Comparison
+• Hospital Efficiency Scatter Plot
+• Interactive Slicers
+
+💡Business Insights
+• Significant pricing variation exists across states.
+• Certain DRGs consistently show high payment gaps.
+• Medicare reimbursement does not scale proportionally with hospital charges.
+• High-volume hospitals show clustered pricing behavior.
+
+🛠Tools & Technologies Used
+• Power BI Desktop
+• DAX (Data Analysis Expressions)
+• Star Schema Data Modeling
+• Data Cleaning & Transformation
+• KPI Design
+• Interactive Dashboard Development
